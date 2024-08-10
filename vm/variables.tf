@@ -16,3 +16,18 @@ variable "network_interface_id" {
   description = "ID da interface de rede"
   type        = string
 }
+
+# Variável para o nome de usuário do administrador
+variable "admin_username" {
+  description = "O nome de usuário do administrador para a VM"
+  type        = string
+  default     = "wordpress"
+}
+
+# Variável para a senha do administrador
+variable "admin_password" {
+  description = "A senha do administrador para a VM"
+  type        = string
+  sensitive   = true
+  default = "Word@1234"
+}

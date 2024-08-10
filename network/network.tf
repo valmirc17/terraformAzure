@@ -1,9 +1,3 @@
-resource "azurerm_network_security_group" "nsg-terraform" {
-  name                = "nsg-terraform"
-  location            = var.location
-  resource_group_name = var.resource_group_name
-}
-
 resource "azurerm_virtual_network" "vnet-terraform" {
   name                = "vnet-terraform"
   location            = var.location
@@ -31,7 +25,7 @@ resource "azurerm_public_ip" "public_ip" {
   allocation_method   = "Static"
 
   tags = {
-    environment = "Production"
+    environment = "Dev"
   }
 }
 
